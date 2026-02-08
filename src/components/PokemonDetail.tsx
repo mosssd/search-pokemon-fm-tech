@@ -91,12 +91,10 @@ export default function PokemonDetail({ pokemon }: Props) {
           <h2 className="font-semibold text-lg mb-2">
             Evolution Requirement
           </h2>
-
-          <div className="grid grid-cols-2 gap-2 text-sm">
-            <p className="text-lg text-gray-700">
-              - {pokemon.evolutionRequirements.amount} {pokemon.evolutionRequirements.name} -
-            </p>
-          </div>
+          <p className="text-lg text-gray-700">
+            - {pokemon.evolutionRequirements.amount} {pokemon.evolutionRequirements.name} -
+          </p>
+    
         </div>
       )}
     </div>
