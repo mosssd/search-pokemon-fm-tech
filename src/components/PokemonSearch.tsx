@@ -44,7 +44,7 @@ export default function PokemonSearch() {
         <input
           value={search}
           onChange={(e) => setSearch(e.target.value)}
-          placeholder="Search Pokémon..."
+          placeholder="Search Pokemon..."
           className="flex-1 border rounded-2xl px-4 py-2 focus:outline-none focus:ring"
         />
 
@@ -70,7 +70,7 @@ export default function PokemonSearch() {
       {/* Not found */}
       {!loading && !data?.pokemon && nameFromUrl && (
         <p className="text-center text-gray-500">
-          No Pokémon found for "{nameFromUrl}"
+          No Pokemon found for "{nameFromUrl}"
         </p>
       )}
 
