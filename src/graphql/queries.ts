@@ -4,6 +4,7 @@ export const GET_POKEMON = gql`
   query pokemon($name: String!) {
     pokemon(name: $name) {
       id  
+      image
       number
       name
       weight {
@@ -17,7 +18,6 @@ export const GET_POKEMON = gql`
       classification
       types
       resistant
-      image
       attacks {
         fast {
           name
@@ -33,6 +33,7 @@ export const GET_POKEMON = gql`
       weaknesses
       fleeRate
       maxCP
+      maxHP
       evolutions {
         id
         number
@@ -44,7 +45,6 @@ export const GET_POKEMON = gql`
         amount
         name
       }
-      maxHP
     }
   }
 `;

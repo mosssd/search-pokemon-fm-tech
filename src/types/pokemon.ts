@@ -26,8 +26,8 @@ export interface Pokemon {
   weaknesses: string[];
   fleeRate: number;
   maxCP: number;
-  evolutions?: Pokemon[] | null; // ถ้าร่างสุดท้ายจะเป็น null
-  evolutionRequirements: {
+  evolutions?: Pokemon[] | null; 
+  evolutionRequirements?: {
     amount: number;
     name: string;
   } | null;
