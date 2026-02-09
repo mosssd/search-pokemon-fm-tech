@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Pokemon } from "@/types/pokemon";
 
 interface Props {
@@ -23,11 +24,12 @@ export default function PokemonEvolution({ evolutions }: Props) {
               key={evo.id}
               href={`/?name=${evo.name}`}
               className="block cursor-pointer rounded-2xl border p-4 text-center hover:shadow-md hover:-translate-y-1 transition">
-                <div className="flex items-center justify-center h-32 w-full mb-2"> 
-                  <img 
-                    src={evo.image} 
-                    alt={evo.name} 
-                    className="max-h-full max-w-full object-contain" 
+                <div className="relative flex items-center justify-center h-32 w-full mb-2"> 
+                  <Image
+                    src={evo.image}
+                    alt={evo.name}
+                    fill
+                    className="object-contain"
                   />
                 </div>
                 <p className="mt-2 font-medium">
